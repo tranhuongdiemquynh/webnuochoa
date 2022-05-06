@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", sans-serif;
+    }
+    /*header*/
+    li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* Phần header */
+.content {
+    padding: 16px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.head1 {
+    display: flex;
+    height: 70px;
+    margin-left: 100px;
+}
+.head1 .lienket {
+    margin-left: 100px;
+    display: flex;
+    font-size: 20px;
+}
+.head1 .lienket li a{
+    padding: 20px 15px;
+}
+.head1 .logo {
+    margin-top: 7px;
+    margin-left: 450px;
+}
+.head1 .others {
+    margin-left: 320px;
+    display: flex;
+    font-size: 20px;
+}
+.head1 .others li {
+    padding: 20px 30px;
+}
+.head1 .others .login {
+    margin-top: 21px;
+    margin-left: 230px;
+    color: #551A8B;
+}
+/* rê chuột là có */
+.head1 .others .login:hover .user1 {
+    display: block;
+}
+.head1 .others .login .user1 {
+    font-size: 16px;
+    font-weight: 0px;
+    /* ẩn  */
+    position: absolute;     
+    display: none;
+    background-color: #e8e8e8;
+    border-radius: 20px;
+    width: 115px;
+    height: 60px;
+}
+.head1 .others .login .user1 a {
+    color: rgb(46, 45, 45);
+}
+.head1 .others .login .user1 .user11 {
+    margin: -10px -12px;
+}
+.head1 .others .login .user1 .user12 {
+    margin-top: -30px;
+    margin-left: -12px;
+}
+.head1 .others .login .user1 li>a:hover {
+    color: #e9443e;
+}
+.head1 .others .login .user21 p {
+    margin-left: -10px;
+    margin-top: -1px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(46, 45, 45);
+}
+
+.head1 .others .user2 {
+    display: flex;
+}
+.head1 .others .user2 .user21 {
+    margin-left: 230px;
+    margin-top: 19px;
+}
+.head1 .others .user2 .user21 p{
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(46, 45, 45);
+}
+.head1 .others .user2 .user21:hover ul{
+    display: block;
+}
+.head1 .others .user2 .user21 ul{
+    font-size: 16px;
+    font-weight: 0px;
+    position: absolute;
+    display: none;
+    background-color: #e8e8e8;
+    border-radius: 20px;
+    width: 170px;
+    height: 95px;
+}
+.head1 .others .user2 .user21 .u1 {
+    margin: -12px -12px;
+}
+.head1 .others .user2 .user21 .u2 {
+    margin: -30px -12px;
+}
+.head1 .others .user2 .user21 li {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-left: -5px;
+}
+.head1 .others .user2 .user21 a {
+    color: rgb(46, 45, 45);
+} 
+.head1 .others .user2 .user21 a:hover {
+    color: #e9443e;
+} 
+.head1 .others .user2 .user22 a{
+    margin-left: 25px;
+    margin-top: 19px;
+}
+.head1 .others .search-box {
+    position: absolute;
+    margin-top: 14px;
+    background: #e8e8e8;
+    height: 35px;
+    border-radius: 40px;
+    padding: 1px 6px;
+}
+.head1 .others .search-btn {
+    color: #000;
+    margin-top: 6px;
+    height: 20px;
+    display: flex;
+} 
+.head1 .others .search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #000;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.head2 {
+    background-color: #D5A6E6;
+    width: 1844px;
+    display: flex;
+    height: 70px; 
+}
+.head2 .menu {   
+    margin-left: 220px;
+    font-size: 20px;
+    display: flex;
+}
+.head2 .menu>li  {
+    padding: 25px 40px;
+}
+.head2 li a {
+    color: #fff;
+}
+.head2 li a:hover {
+    color: #e8e8e8;
+}
+#soLuongSP {
+    margin-top: -40px;
+    margin-left: 38px;
+    background: #da4545;
+    font-size: 14px;
+    padding: 6px 6px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;    
+}
+/* Phần footer */
+.nut {    
+    font-size: 18px; 
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;        
+}
+.chantrang {
+    background-color: #e8e8e8;
+    width: 1844px;
+    height: 300px; 
+    display: flex;
+}
+.chantrang .nut:hover {
+    color: #D5A6E6;
+}
+.chantrang .chan1 {
+    margin-top: 70px;
+    margin-left: 120px;
+}
+.chantrang .chan2 {
+    display: flex;
+    font-size: 25px;
+    color: #252525;
+    margin-top: 20px;
+}
+.chantrang .chan2 .chan21 {
+    margin-left: 150px;
+}
+.chantrang .chan2 .chan22 {
+    margin-left: 245px;
+}
+.chantrang .chan2 .chan23 {
+    margin-left: 220px;
+}
+.chantrang .chan2 .chan24 {
+    margin-left: 200px;
+}
+.bac1 {
+    margin-top: 82px;   
+}
+.bac2 {
+    margin-top: 137px;   
+}
+.bac3 {
+    margin-top: 192px;   
+}
+.bac4 {
+    margin-top: 247px;   
+}
+.website {
+    margin-left: -1091px;
+}
+.dieukhoan {
+    padding-left: 288px;
+}
+.chinhsach {
+    padding-left: 187px;
+}
+.timkiem {
+    padding-left: 174px;
+}
+.page {
+    margin-left: -1093px;
+}
+.muahang {
+    margin-left: 309px;
+}
+.dangnhap {
+    margin-left: 491px;
+}
+.sanPham {
+    margin-left: -1108px;
+}
+.dangky {
+    margin-left: 938px;
+}
+.hotline {
+    margin-left: -1107px;
+}
+.giohang {
+    margin-left: 961px;
+}
+#backtop {
+    width: 50px;
+    height: 50px;
+    background: #a6e6b6;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    cursor: pointer;
+}
+
+* trang chu 1 */
+.slider-item {
+    width: 100%;
+    height: 850px;
+    background-size:cover;
+}
+.owl-prev {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px!important;
+    color: #fff!important;
+}
+.owl-next {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px!important;
+    color: #fff!important;
+}
+.owl-prev, .owl-next:hover {
+    background: none!important;
+}
+.owl-dots {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 25px;
+    top: 51%;
+    transform: translateY(-50%);
+}
+.owl-dot span {
+    width: 7px!important;
+    height: 7px!important;
+    margin: 0!important; 
+    background-color: transparent!important; 
+}
+.owl-dot {
+    width: 17px;
+    height: 17px;
+    border: 2px solid #fff!important;
+    border-radius: 50%;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    margin-bottom: 6px;
+}
+.owl-dot.active span {
+     background-color: #A773E8!important;
+}  
+
+</style>
+
+<header>
+    <div class="head1">
+        <!-- tạo 3 liên kết icon-->
+        <div class="lienket">
+            <li>
+                <a class="fab fa-facebook" href="https://www.facebook.com/groups/917743915813587"> </a>
+                <a class="fab fa-facebook-messenger" href="https://www.facebook.com/messages/t/4403583799721853"> </a>
+                <a class="fab fa-instagram" href=""> </a>
+            </li>
+        </div>
+        <!--tạo logo-->
+        <div class="logo">
+            <a href="user_trangchu.php">
+                <img src="anh/logo.jpg" height="50" width="200" >
+            </a>
+        </div>        
+        <div class="others">
+            <div class="search-box">
+                <input id="timkiem" type="text" class="search-txt" placeholder="Tìm kiếm ...">   
+                <button class="search-btn" type="submit" onclick="timkiem(this)">
+                    <i class="fas fa-search"> </i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--tạo mục menu-->
+    <div class="head2" id="myHeader">
+        <nav>
+            <ul class="menu">
+                <li> <a href=""> TẤT CẢ SẢN PHẨM </a> </li>
+                <li> <a href=""> SẢN PHẨM MỚI </a> </li>
+                <li> <a href=""> SALE OFF!! </a></li> 
+                <li> <a href=""> NƯỚC HOA NAM </a></li> 
+                <li> <a href=""> NƯỚC HOA NỮ </a></li> 
+                <li> <a href=""> LIÊN HỆ </a></li>      
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="slider owl-carousel owl-themse">
+    <div class="slider-item slider-item-one">
+        <img src="https://media.ex-cdn.com/EXP/media.nhadautu.vn/files/content/2021/01/26/beauty_success-terre-dhermes-0631.jpg">
+    </div>
+    <div class="slider-item slider-item-two">
+        <img src="https://bloganchoi.com/wp-content/uploads/2019/06/co-gai-tu-tin.jpg">
+    </div>
+    <div class="slider-item slider-item-three">
+        <img src="https://kenh14cdn.com/Uploaded/Share/2011/11/03/111104FaNews09.jpg">
+    </div>
+    <div class="slider-item slider-item-four">       
+        <img src="https://parisvietnam.vn/wp-content/uploads/2017/10/LancomeLaNuitTresor.jpg">
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+    });
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        autoplay: true,
+        default: 10000,
+        responsive:{
+            0:{
+                items: 1
+            },
+            600:{
+                items: 1 
+            },
+            900:{
+                items: 1
+            },
+            1200: {
+                items: 1
+            }
+        }
+    })
+</script> 
+
+<form action="" method="POST" role="form">
+    <div class="chantrang">
+        <div class=chan1>
+            <img src="anh/logo.jpg" height="150" width="300">
+        </div>
+        <div class="chan2">
+            <p class="chan21"> Thông Tin </p>
+            <p class="chan22"> Hướng dẫn </p>
+            <p class="chan23"> Chính sách </p>
+            <p class="chan24"> Hỗ trợ </p>
+        </div>
+        <div class="bac1">
+            <input class="website nut" type="submit" name="website" value="Website">
+            <input class="dieukhoan nut" type="submit" name="dieukhoan" value="Điều khoản dịch vụ">
+            <input class="chinhsach nut" type="submit" name="chinhsach" value="Chính sách đổi trả">
+            <input class="timkiem nut"  type="submit" name="timkiem" value="Tìm kiếm">
+        </div>
+        <div class="bac2">
+            <input class="page nut" type="submit" name="page" value="Page">
+            <input class="muahang nut" type="submit" name="muahang" value="Hướng dẫn mua hàng">
+            <input class="dangnhap nut" type="submit" name="dangnhap_a" value="Đăng nhập">
+        </div>
+        <div class="bac3">
+            <input class="sanPham nut" type="submit" name="sanpham" value="Sản phẩm">
+            <input class="dangky nut" type="submit" name="dangky_a" value="Đăng ký">
+        </div>
+        <div class="bac4">
+            <input class="hotline nut" type="submit" name="hotline" value="Hotline">
+            <input class="giohang nut" type="submit" name="giohang_a" value="Giỏ hàng">
+        </div>
+    </div>
+</form>
+
+<script>
+                                                    window.fbAsyncInit = function() {
+                                                        FB.init({
+                                                            appId: "1784956665094089",
+                                                            xfbml: true,
+                                                            version: "v2.6"
+                                                        });
+                                                    };
+                                                    (function(d, s, id){
+                                                        var js, fjs = d.getElementsByTagName(s)[0];
+                                                        if (d.getElementById(id)) { return; }
+                                                        js = d.createElement(s); js.id = id;
+                                                        js.src = "//connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
+                                                        fjs.parentNode.insertBefore(js, fjs);
+                                                    }(document, 'script', 'facebook-jssdk'));
+                                                </script>
+                                                <div class="fb-customerchat" page_id="104979508856576"></div>
